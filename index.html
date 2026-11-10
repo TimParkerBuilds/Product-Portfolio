@@ -34,6 +34,7 @@
   --visual: linear-gradient(160deg, #d9d6f0, #d5e6cf);
   --shadow: 0 6px 20px rgba(20,60,55,0.14);
   --foot: #10302c;
+  --wrap: max(1180px, min(1560px, 90vw));
   --display: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "SF Mono", Consolas, monospace;
   color-scheme: light;
@@ -83,12 +84,12 @@ html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--display); font-size: 18px; line-height: 1.55; }
 a { color: inherit; }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 .mono { font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.04em; font-size: 13px; }
 
 /* nav */
 .nav-wrap { position: sticky; top: 16px; z-index: 10; padding: 16px 24px 0; margin-bottom: -76px; }
-.nav { max-width: 1180px; margin: 0 auto; background: rgba(16,48,44,0.72); color: #fff; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 10px 12px 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
+.nav { max-width: var(--wrap); margin: 0 auto; background: rgba(16,48,44,0.72); color: #fff; border: 1px solid rgba(255,255,255,0.18); border-radius: 999px; padding: 10px 12px 10px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); }
 .nav b { font-weight: 500; font-size: 18px; letter-spacing: -0.01em; white-space: nowrap; }
 .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 8px; }
 .nav a { text-decoration: none; }
@@ -105,7 +106,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 /* hero */
 .hero { margin: 8px 8px 0; border-radius: 28px; min-height: 660px; color: #fff; display: flex; align-items: flex-end;
   background: radial-gradient(55% 75% at 84% 14%, #2dc2f0 0%, transparent 62%), radial-gradient(40% 55% at 22% 8%, rgba(153,146,206,0.75) 0%, transparent 62%), radial-gradient(45% 55% at 92% 100%, #8aa55f 0%, transparent 62%), #27534e; }
-.hero-in { width: 100%; max-width: 1180px; margin: 0 auto; padding: 130px 24px 56px; display: flex; flex-direction: column; gap: 24px; }
+.hero-in { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 130px 24px 56px; display: flex; flex-direction: column; gap: 24px; }
 .badge { align-self: flex-start; color: #e3f4f2; }
 h1 { margin: 0; font-weight: 400; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; letter-spacing: -0.025em; text-wrap: balance; }
 h1 .sub { display: block; margin-top: 14px; font-weight: 300; font-size: clamp(24px, 3.4vw, 44px); line-height: 1.12; letter-spacing: -0.01em; color: #e3f4f2; max-width: 820px; }
@@ -138,7 +139,7 @@ h2 em { font-style: normal; color: var(--accent-deep); }
 .beats { margin: 0; display: flex; flex-direction: column; gap: 14px; }
 .beats div { display: flex; flex-wrap: wrap; gap: 4px 16px; }
 .beats dt { flex: 0 0 92px; color: var(--accent-deep); padding-top: 4px; }
-.beats dd { margin: 0; flex: 1 1 260px; min-width: 0; max-width: 480px; color: var(--body); font-size: 17px; }
+.beats dd { margin: 0; flex: 1 1 260px; min-width: 0; max-width: 620px; color: var(--body); font-size: 17px; }
 .stats { display: flex; flex-wrap: wrap; gap: 20px 36px; margin-top: 8px; }
 .stat { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .stat b { font-weight: 400; font-size: 64px; line-height: 1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
@@ -147,7 +148,7 @@ h2 em { font-style: normal; color: var(--accent-deep); }
 .partners ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .partners li { background: var(--node); border-radius: 999px; padding: 6px 14px; font-size: 15px; color: var(--ink); }
 .visual { flex: 1 1 340px; min-width: 0; border-radius: 22px; padding: 28px; background: var(--visual); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0; }
-.node { width: min(100%, 360px); background: var(--node); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 4px; }
+.node { width: min(100%, 420px); background: var(--node); border-radius: 12px; padding: 14px 16px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 4px; }
 .node b { font-weight: 500; font-size: 16px; }
 .node span { font-size: 14px; color: var(--muted); }
 .link { width: 2px; height: 22px; background: var(--accent); position: relative; }
@@ -177,7 +178,7 @@ h2 em { font-style: normal; color: var(--accent-deep); }
 /* about */
 .about-grid { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 32px; align-items: flex-start; }
 .about-text { flex: 1 1 420px; min-width: 0; }
-.about-text p { margin: 0 0 16px; max-width: 600px; color: var(--body); }
+.about-text p { margin: 0 0 16px; max-width: 700px; color: var(--body); }
 .about-card { flex: 1 1 300px; background: var(--card); border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 14px; }
 .about-card .tags { gap: 8px; }
 .journey-head { margin: 56px 0 8px; }
@@ -198,7 +199,7 @@ h2 em { font-style: normal; color: var(--accent-deep); }
 /* footer */
 footer { margin: 96px 8px 8px; border-radius: 28px; color: #fff;
   background: radial-gradient(50% 90% at 94% 105%, rgba(45,194,240,0.36) 0%, transparent 65%), radial-gradient(40% 80% at 4% 105%, rgba(153,146,206,0.32) 0%, transparent 65%), radial-gradient(36% 70% at 52% 115%, rgba(138,165,95,0.28) 0%, transparent 65%), var(--foot); }
-.foot { max-width: 1180px; margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-wrap: wrap; gap: 40px 64px; justify-content: space-between; }
+.foot { max-width: var(--wrap); margin: 0 auto; padding: 64px 24px 40px; display: flex; flex-wrap: wrap; gap: 40px 64px; justify-content: space-between; }
 .foot h3 { margin: 0 0 12px; font-weight: 400; font-size: clamp(32px, 4vw, 52px); line-height: 1.08; letter-spacing: -0.01em; max-width: 520px; }
 .foot .col { display: flex; flex-direction: column; gap: 8px; color: #d6d9e0; }
 .foot .col .mono { color: var(--accent); margin-bottom: 4px; }
